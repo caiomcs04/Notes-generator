@@ -16,11 +16,11 @@
 > ```
 >Access your terminal project folder:
 > ```
-> 	cd [Nome da pasta do seu Projeto]
+> 	cd [Your Project folder name]
 > ```
-> Já pasta da aplicação em seu terminal, digite o seguinte comando:
+> Already the application's folder in your terminal, type the following command to install the node-modules:
 > ```
-> 	yarn install
+> 	npm install
 > ```
 
 ## Execução
@@ -29,13 +29,11 @@ Esse é talvez o tópico mais importante, faça com atenção.
 
 Através das informações especificadas nele, outras pessoas poderam visualizar e testar o funcionamento da sua aplicação.
 
-> Exemplo: 
->
-> Após ter configurado o projeto e ter aguardado a instalação das dependencias de desenvolvimento, execute o comando:
+>  When the installation is ready, start the application with the command::
 > ```
-> 	yarn start
+> 	npm start
 > ```
-> A aplicação estará disponível para visualização em seu navegador, caso isso não aconteça automaticamente abre o navegador no seguinte endereço: _localhost:3000_
+>The application will be available for viewing in your browser, if this does not happen automatically open the browser at the following address: _localhost: 3000_
 
 ## Funcionalidades
 
