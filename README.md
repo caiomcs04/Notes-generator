@@ -1,10 +1,7 @@
-# Nome do Projeto
+# Notes Generator
 
-Breve descrição (preferencialmente em um paragrafo) do projeto abordando o porque da sua criação, objetivo ou ideia de utilização.
-
-> Exemplo:
->
-> Este projeto visa ajudar diretamente os desenvolvedores, principalmente aqueles que não se sentem confortável com o inglês, na elaboração da descrição de seus projetos, fornecendo neste template uma base com tópicos, exemplos de como e o que colocar no README.md.
+>An app to create notes in order to organize the user's tasks. 
+>Application created for programming practice purposes
 
 ## Pré-requisitos
 
