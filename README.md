@@ -12,9 +12,9 @@
 
 > Clone this project in your machine with the command:
 > ```
-> 	git clone [Url do seu repositório]
+> 	git clone [https://github.com/caiomcs04/notes-generator.git]
 > ```
-> Acesse a pasta do projeto seu terminal:
+>Access your terminal project folder:
 > ```
 > 	cd [Nome da pasta do seu Projeto]
 > ```
