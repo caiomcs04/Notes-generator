@@ -9,10 +9,13 @@ class NotesList extends Component {
     return (
       <>
         <ul className="notes-list">
-          {Array.of("trabalho","trabalho","estudos").map((categoria,index) =>{
+          {this.props.notes.map((note,index) =>{
+            let title = note.title
+            let text = note.text
             return(
               <li className="notes-list-item" key={index}>
-              <NotesCards />
+              <NotesCards noteTitle={note.title}
+              noteText={note.text}/>
             </li>
             )
           })}
