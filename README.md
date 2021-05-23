@@ -3,23 +3,14 @@
 >An app to create notes in order to organize the user's tasks. 
 >Application created for programming practice purposes
 
-## Pré-requisitos
+## Prerequisites
 
-Informe aqui tudo que é obrigatório previamente já ter sido configurado/instalado no ambiente que será executado sua aplicação; exemplifique também como fazê-lo;
+> - **Node** with version greater than or equal to 8.1 - [Node Donwload](https://nodejs.org/pt-br/download/)
+> - **NPM**  with version greater than or equal to 5.6 - [Npm Donwload](https://www.npmjs.com/package/download)
 
-> Exemplo (Para criar uma aplicação com React):
-> - **Node** com versão superior ou igual que 8.1 - [Node Donwload](https://nodejs.org/pt-br/download/)
-> - **NPM** com versão superior ou igual que 5.6 - [Npm Donwload](https://www.npmjs.com/package/download)
+## Installation
 
-## Instalação
-
-A pergunta a ser respondida aqui é: "Quais comandos precisará outra pessoa fazer para conseguir configurar o seu projeto?"
-
-Recomendo configurar o seu projeto em uma outra pasta/ambiente e anotar aqui todos os passos necessários para a execução.
-
-> Exemplo:
->
-> Clone esse projeto em seu computador com o comando:
+> Clone this project in your machine with the command:
 > ```
 > 	git clone [Url do seu repositório]
 > ```
