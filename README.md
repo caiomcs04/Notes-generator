@@ -23,11 +23,7 @@
 > 	npm install
 > ```
 
-## Execução
-
-Esse é talvez o tópico mais importante, faça com atenção.
-
-Através das informações especificadas nele, outras pessoas poderam visualizar e testar o funcionamento da sua aplicação.
+## Execution
 
 >  When the installation is ready, start the application with the command::
 > ```
