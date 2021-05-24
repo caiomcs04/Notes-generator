@@ -8,8 +8,6 @@ import React, { Component } from "react"
 
 class App extends Component {
 
-
-
   constructor() {
     super()
     this.state = {
@@ -28,6 +26,7 @@ class App extends Component {
   render() {
     return (
       <section className="conteudo">
+        aaaaaaaaa
         <RegisterForm handleNote={this.handleNote.bind(this)} />
         <NotesList notes={this.state.notes}/>
       </section>

@@ -14,8 +14,8 @@ class NotesList extends Component {
             let text = note.text
             return(
               <li className="notes-list-item" key={index}>
-              <NotesCards noteTitle={note.title}
-              noteText={note.text}/>
+              <NotesCards noteTitle={title}
+              noteText={text}/>
             </li>
             )
           })}
