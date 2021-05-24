@@ -1,7 +1,13 @@
 import React, { Component } from "react";
 import "./style.css"
-
+import {ReactComponent as DeleteSVG} from "../../assets/img/delete-icon.svg"
 class NotesCards extends Component {
+
+	delete(){
+		const index = this.props.noteIndex;
+		this.props.deleteNote(index)
+	}
+
 	render() {
 		return (
 			<>
@@ -10,6 +16,8 @@ class NotesCards extends Component {
 						<h3 className="title-card-note">
 							{this.props.noteTitle}
           	</h3>
+						<DeleteSVG className="delete-icon"
+						 onClick={this.delete.bind(this)}/>
 					</header>
 					<header>
 						<p className="body-card-note">
