@@ -8,6 +8,10 @@ export default class NotesArray{
     this._subscribers.push(func);
   }
 
+  unSubscribe(func){
+    this._subscribers = this._subscribers.filter(f => f!== func)
+  }
+
   notifeSubscribe(){
     this._subscribers.forEach(func => func(this.notes));
   }

@@ -4,17 +4,22 @@ import "./style.css"
 
 class CategoryList extends Component {
 
-  constructor(){
+  constructor() {
     super();
-    this.state={categorys:[]}
+    this.state = { categorys: [] }
+    this.newCategorys = this.newCategorys.bind(this)
   }
 
-  componentDidMount(){
-    this.props.categorys.subscribe(this.newCategorys.bind(this))
+  componentDidMount() {
+    this.props.categorys.subscribe(this.newCategorys)
   }
 
-  newCategorys(categorys){
-    this.setState({...this.state,categorys})
+  componentWillUnmount() {
+    this.props.notes.subscribe(this.newCategorys)
+  }
+
+  newCategorys(categorys) {
+    this.setState({ ...this.state, categorys })
   }
 
   handleInputEvent(e) {

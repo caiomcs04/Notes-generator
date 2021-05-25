@@ -9,10 +9,15 @@ class RegisterForm extends Component {
     this.text = "";
     this.category = "";
     this.state = { categorys: [] }
+    this.newCategorys = this.newCategorys.bind(this)
   }
 
   componentDidMount() {
-    this.props.categorys.subscribe(this.newCategorys.bind(this))
+    this.props.categorys.subscribe(this.newCategorys)
+  }
+
+  componentWillUnmount(){
+    this.props.categorys.unSubscribe(this.newCategorys)
   }
 
   newCategorys(categorys) {
