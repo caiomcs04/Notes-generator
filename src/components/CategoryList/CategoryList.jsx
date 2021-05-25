@@ -3,10 +3,11 @@ import React, { Component } from 'react';
 import "./style.css"
 
 class CategoryList extends Component {
-  
-  handleInputEvent(e){
-    if(e.key === "Enter"){
-    console.log("opa")
+
+  handleInputEvent(e) {
+    if (e.key === "Enter") {
+      let category = e.target.value
+      this.props.handleCategory(category);
     }
   }
 
@@ -14,12 +15,15 @@ class CategoryList extends Component {
     return (
       <section className="category">
         <ul className="category-list">
-          <li className="category-item">ALALALA</li>
+          {this.props.categorys.map((category, index) => {
+            return <li key={index} className="category-item">{category}</li>
+          })
+          }
         </ul>
         <input type="text"
-         className="category-input" 
-         placeholder="Adicionar Categoria"
-         onKeyUp={this.handleInputEvent.bind(this)}/>
+          className="category-input"
+          placeholder="Adicionar Categoria"
+          onKeyUp={this.handleInputEvent.bind(this)} />
       </section>
     )
   }

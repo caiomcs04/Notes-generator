@@ -13,6 +13,7 @@ class App extends Component {
     super()
     this.state = {
       notes: [],
+      categorys: [],
     }
   }
 
@@ -21,6 +22,14 @@ class App extends Component {
     const newNotes = [...this.state.notes, newNote]
     const newState = {
       notes: newNotes
+    }
+    this.setState(newState)
+  }
+
+  handleCategory(category){
+    const newCategorys = [...this.state.categorys, category]
+    const newState = {
+      ...this.state, categorys:newCategorys
     }
     this.setState(newState)
   }
@@ -36,7 +45,8 @@ class App extends Component {
       <section className="conteudo">
         <RegisterForm handleNote={this.handleNote.bind(this)} />
         <main className="conteudo-principal">
-          <CategoryList />
+          <CategoryList categorys={this.state.categorys}
+          handleCategory ={this.handleCategory.bind(this)}/>
           <NotesList
             deleteNote={this.deleteNote.bind(this)}
             notes={this.state.notes} />
