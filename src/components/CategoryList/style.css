@@ -1,0 +1,21 @@
+.category{
+  display: flex;
+  flex-direction: row;
+  margin-top: 12px;
+}
+.category-list{
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+.category-item{
+  background-color: var(--secundaria);
+  color: white;
+  padding: 4px 8px;
+  border-radius: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.category-input{
+  margin-right: 20px;
+}
