@@ -4,6 +4,8 @@ import CategoryList from "./components/CategoryList/CategoryList"
 import "./assets/App.css"
 import "./assets/index.css"
 import React, { Component } from "react"
+import Categorys from "./data/Categorys"
+import NotesArray from "./data/Notes"
 
 
 
@@ -11,45 +13,22 @@ class App extends Component {
 
   constructor() {
     super()
-    this.state = {
-      notes: [],
-      categorys: [],
-    }
+    this.category = new Categorys
+    this.notes = new NotesArray
   }
 
-  handleNote(title, text) {
-    const newNote = { title, text }
-    const newNotes = [...this.state.notes, newNote]
-    const newState = {
-      notes: newNotes
-    }
-    this.setState(newState)
-  }
-
-  handleCategory(category){
-    const newCategorys = [...this.state.categorys, category]
-    const newState = {
-      ...this.state, categorys:newCategorys
-    }
-    this.setState(newState)
-  }
-
-  deleteNote(index) {
-    let notes = this.state.notes
-    notes.splice(index, 1);
-    this.setState({ notes: notes })
-  }
 
   render() {
     return (
       <section className="conteudo">
-        <RegisterForm handleNote={this.handleNote.bind(this)} />
+        <RegisterForm handleNote={this.notes.handleNote.bind(this.notes)}
+        categorys={this.category} />
         <main className="conteudo-principal">
-          <CategoryList categorys={this.state.categorys}
-          handleCategory ={this.handleCategory.bind(this)}/>
+          <CategoryList categorys={this.category}
+          handleCategory ={this.category.handleCategory.bind(this.category)}/>
           <NotesList
-            deleteNote={this.deleteNote.bind(this)}
-            notes={this.state.notes} />
+            deleteNote={this.notes.deleteNote.bind(this.notes)}
+            notes={this.notes} />
         </main>
 
       </section>

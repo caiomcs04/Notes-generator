@@ -18,6 +18,7 @@ class NotesCards extends Component {
           	</h3>
 						<DeleteSVG className="delete-icon"
 						 onClick={this.delete.bind(this)}/>
+						 <h4>{this.props.category}</h4>
 					</header>
 					<header>
 						<p className="body-card-note">
