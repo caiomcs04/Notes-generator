@@ -1,5 +1,6 @@
 import { render } from '@testing-library/react';
 import React, { Component } from 'react';
+import { ReactComponent as DeleteSVG } from "../../assets/img/delete-icon-white.svg"
 import "./style.css"
 
 class CategoryList extends Component {
@@ -23,26 +24,54 @@ class CategoryList extends Component {
   }
 
   handleInputEvent(e) {
-    if (e.key === "Enter") {
-      let category = e.target.value
-      this.props.handleCategory(category);
+    let category = document.getElementById("category")
+    if (e.key === "Enter" || e.type === "click") {
+      if (category.value.length > 0) {
+        console.log(category.value)
+        this.props.handleCategory(category.value);
+        category.value = ""
+      }
     }
+  }
+
+  delete() {
+    let index = 
+    this.props.deleteCategory(index)
   }
 
   render() {
     return (
-      <section className="category">
-        <ul className="category-list">
-          {this.state.categorys.map((category, index) => {
-            return <li key={index} className="category-item">{category}</li>
-          })
-          }
-        </ul>
-        <input type="text"
-          className="category-input"
-          placeholder="Adicionar Categoria"
-          onKeyUp={this.handleInputEvent.bind(this)} />
-      </section>
+      <article className="">
+        <section className="category">
+          <ul className="category-list">
+            {this.state.categorys.map((category, index) => {
+              let index
+              return (
+                <section className="div-li">
+                  <li key={index} className="category-item">
+                    <p>{category}</p>
+                    <DeleteSVG className="category-delete-icon"
+                      onClick={console.log(this)} />
+                  </li>
+                  <li></li>
+                </section>
+              )
+            })
+            }
+          </ul>
+          <section className="input-buttom-containner">
+            <input type="text"
+              className="category-input"
+              placeholder="Adicionar Categoria"
+              id="category"
+              onKeyUp={this.handleInputEvent.bind(this)} />
+            <button className="register-category-submit"
+              onClick={this.handleInputEvent.bind(this)}>
+              Adicionar Categoria
+            </button>
+          </section>
+        </section>
+      </article>
     )
   }
 }

@@ -25,7 +25,8 @@ class App extends Component {
         categorys={this.category} />
         <main className="conteudo-principal">
           <CategoryList categorys={this.category}
-          handleCategory ={this.category.handleCategory.bind(this.category)}/>
+          handleCategory ={this.category.handleCategory.bind(this.category)}
+          deleteCategory={this.notes.deleteNote.bind(this.notes)}/>
           <NotesList
             deleteNote={this.notes.deleteNote.bind(this.notes)}
             notes={this.notes} />

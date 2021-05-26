@@ -10,12 +10,45 @@
   justify-content: space-evenly;
 }
 .category-item{
+  display: flex;
   background-color: var(--secundaria);
   color: white;
   padding: 4px 8px;
   border-radius: 10px;
+justify-content: center;
+align-items: center;
+  /* max-height: 30px; */
   font-family: Arial, Helvetica, sans-serif;
+}
+.category-item p{
 }
 .category-input{
   margin-right: 20px;
+}
+
+.input-buttom-containner{
+  display: flex;
+  flex-direction: column;
+}
+
+.register-category-submit {
+  margin-top: 5px;
+  margin-right: 20px;
+  background-color: var(--secundaria);
+  color: white;
+  font-weight: 400;
+}
+
+.category-containner{
+  display: flex;
+}
+
+.category-delete-icon{
+  width: 20px;
+  margin-left: 10%;
+  cursor: pointer;
+}
+
+.div-li{
+  display: flex;
 }
