@@ -32,6 +32,7 @@ class NotesList extends Component {
             let title = note.title
             let text = note.text
             let category = note.category
+            let display = note.display
             return(
               <li className="notes-list-item" key={index}>
               <NotesCards 
@@ -39,6 +40,7 @@ class NotesList extends Component {
               noteTitle={title}
               noteText={text}
               noteIndex = {index}
+              displayNote = {display}
               category = {category}/>
             </li>
             )

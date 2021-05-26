@@ -18,7 +18,8 @@ export default class Categorys{
     this._subscribers.forEach(func => func(this.categorys));
   }
 
-  handleCategory(newCategory){
+  handleCategory(category){
+    const newCategory = new Category(category,true)
     this.categorys.push(newCategory)
     this.notifeSubscribe()
   }
@@ -28,4 +29,11 @@ export default class Categorys{
     this.notifeSubscribe()
   }
 
+}
+
+class Category{
+  constructor(category, display){
+    this.display = display
+    this.category = category
+  }
 }

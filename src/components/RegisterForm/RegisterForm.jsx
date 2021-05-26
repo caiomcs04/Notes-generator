@@ -56,7 +56,7 @@ class RegisterForm extends Component {
             onChange={this._handleCategory.bind(this)}>
             <option>Sem categoria</option>
             {this.state.categorys.map((category, index) => {
-              return <option key={index} value={category}>{category}</option>
+              return <option key={index} value={category.category}>{category.category}</option>
             })}
           </select>
           <input type="text"

@@ -17,7 +17,7 @@ export default class NotesArray{
   }
 
   handleNote(title,text,category) {
-    const newNote = new Note(title,text,category)
+    const newNote = new Note(title,text,category,true)
     this.notes.push(newNote)
     this.notifeSubscribe()
   }
@@ -30,9 +30,10 @@ export default class NotesArray{
 }
 
 class Note{
-  constructor(title,text,category){
+  constructor(title,text,category, display){
     this.title = title
     this.text = text
+    this.display = display
     this.category = category
   }
 }

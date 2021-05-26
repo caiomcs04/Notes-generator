@@ -27,7 +27,6 @@ class CategoryList extends Component {
     let category = document.getElementById("category")
     if (e.key === "Enter" || e.type === "click") {
       if (category.value.length > 0) {
-        console.log(category.value)
         this.props.handleCategory(category.value);
         category.value = ""
       }
@@ -38,6 +37,10 @@ class CategoryList extends Component {
     this.props.deleteCategory(index)
   }
 
+  teste(){
+    alert("ok")
+  }
+
   render() {
     return (
       <article className="">
@@ -45,12 +48,14 @@ class CategoryList extends Component {
           <ul className="category-list">
             {this.state.categorys.map((category, index) => {
               return (
-                <section className="div-li">
+                <section className="div-li"
+                onClick={() => this.teste()}
+                >
                   <li key={index} className="category-item"
                   >
-                    <p>{category}</p>
+                    <p>{category.category}</p>
                     <DeleteSVG className="category-delete-icon"
-                     onClick={() => this.delete(index)} />
+                      onClick={() => this.delete(index)} />
                   </li>
                   <li></li>
                 </section>
