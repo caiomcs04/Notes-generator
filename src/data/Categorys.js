@@ -23,4 +23,9 @@ export default class Categorys{
     this.notifeSubscribe()
   }
 
+  deleteCategory(index) {
+    this.categorys.splice(index, 1);
+    this.notifeSubscribe()
+  }
+
 }

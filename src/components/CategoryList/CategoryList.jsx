@@ -16,7 +16,7 @@ class CategoryList extends Component {
   }
 
   componentWillUnmount() {
-    this.props.notes.subscribe(this.newCategorys)
+    this.props.categorys.subscribe(this.newCategorys)
   }
 
   newCategorys(categorys) {
@@ -34,8 +34,7 @@ class CategoryList extends Component {
     }
   }
 
-  delete() {
-    let index = 
+  delete(index) {
     this.props.deleteCategory(index)
   }
 
@@ -45,13 +44,13 @@ class CategoryList extends Component {
         <section className="category">
           <ul className="category-list">
             {this.state.categorys.map((category, index) => {
-              let index
               return (
                 <section className="div-li">
-                  <li key={index} className="category-item">
+                  <li key={index} className="category-item"
+                  >
                     <p>{category}</p>
                     <DeleteSVG className="category-delete-icon"
-                      onClick={console.log(this)} />
+                     onClick={() => this.delete(index)} />
                   </li>
                   <li></li>
                 </section>
