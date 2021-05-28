@@ -37,10 +37,6 @@ class CategoryList extends Component {
     this.props.deleteCategory(index)
   }
 
-  teste(){
-    alert("ok")
-  }
-
   render() {
     return (
       <article className="">
@@ -49,7 +45,7 @@ class CategoryList extends Component {
             {this.state.categorys.map((category, index) => {
               return (
                 <section className="div-li"
-                onClick={() => this.teste()}
+                
                 >
                   <li key={index} className="category-item"
                   >
